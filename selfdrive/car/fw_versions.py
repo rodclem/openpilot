@@ -337,7 +337,7 @@ if __name__ == "__main__":
 
   t = time.time()
   print("Getting vin...")
-  addr, vin = get_vin(logcan, sendcan, 1, retry=10, debug=args.debug)
+  addr, vin = get_vin(logcan, sendcan, 1, retry=30, debug=args.debug)
   print(f"VIN: {vin}")
   print("Getting VIN took %.3f s" % (time.time() - t))
   print()
