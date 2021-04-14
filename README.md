@@ -3,6 +3,7 @@
 Table of Contents
 =======================
 
+* [CAUTION PRIVATE BRANCH]
 * [What is openpilot?](#what-is-openpilot)
 * [Integration with Stock Features](#integration-with-stock-features)
 * [Supported Hardware](#supported-hardware)
@@ -20,6 +21,11 @@ Table of Contents
 * [Licensing](#licensing)
 
 ---
+
+CAUTION PRIVATE BRANCH
+------
+
+Caution! This is a private, untested branch that is based on commaai/openpilot and then modified. It is not for public use.
 
 What is openpilot?
 ------

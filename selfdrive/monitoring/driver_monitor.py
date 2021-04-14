@@ -104,7 +104,7 @@ class DriverStatus():
     self.is_rhd_region = rhd
     self.pose = DriverPose()
     self.pose_calibrated = self.pose.pitch_offseter.filtered_stat.n > _POSE_OFFSET_MIN_COUNT and \
-                            self.pose.yaw_offseter.filtered_stat.n > _POSE_OFFSET_MIN_COUNT
+                           self.pose.yaw_offseter.filtered_stat.n > _POSE_OFFSET_MIN_COUNT
     self.blink = DriverBlink()
     self.awareness = 1.
     self.awareness_active = 1.
@@ -209,7 +209,7 @@ class DriverStatus():
       self.pose.yaw_offseter.push_and_update(self.pose.yaw)
 
     self.pose_calibrated = self.pose.pitch_offseter.filtered_stat.n > _POSE_OFFSET_MIN_COUNT and \
-                            self.pose.yaw_offseter.filtered_stat.n > _POSE_OFFSET_MIN_COUNT
+                           self.pose.yaw_offseter.filtered_stat.n > _POSE_OFFSET_MIN_COUNT
 
     self.is_model_uncertain = self.hi_stds * DT_DMON > _HI_STD_FALLBACK_TIME
     self._set_timers(self.face_detected and not self.is_model_uncertain)
@@ -244,7 +244,7 @@ class DriverStatus():
 
     # should always be counting if distracted unless at standstill and reaching orange
     if (not (self.face_detected and self.hi_stds * DT_DMON <= _HI_STD_FALLBACK_TIME) or (self.driver_distraction_filter.x > 0.63 and self.driver_distracted and self.face_detected)) and \
-       not (standstill and self.awareness - self.step_change <= self.threshold_prompt):
+            not (standstill and self.awareness - self.step_change <= self.threshold_prompt):
       self.awareness = max(self.awareness - self.step_change, -0.1)
 
     alert = None
